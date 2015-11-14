@@ -1,5 +1,10 @@
-angular.module("NoteWrangler", ["ngRoute"]).config(["$routeProvider", function ($routeProvider) {
+/*global console, angular */
 
+angular.module("NoteWrangler", ["ngRoute", "ngResource"]).config(["$routeProvider", function ($routeProvider) {
+
+    "use strict";
+    
+    
 }]);
 
 console.log("app.js loaded!");

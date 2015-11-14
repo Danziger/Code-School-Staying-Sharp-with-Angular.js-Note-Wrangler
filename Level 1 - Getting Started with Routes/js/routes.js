@@ -1,4 +1,8 @@
+/*global console, angular */
+
 angular.module("NoteWrangler", ["ngRoute"]).config(["$routeProvider", function ($routeProvider) {
+    
+    "use strict";
     
     // TODO: Reorganize stuff here:
     
@@ -6,18 +10,6 @@ angular.module("NoteWrangler", ["ngRoute"]).config(["$routeProvider", function (
         // redirect to the notes index
         redirectTo: '/notes'
     })
-
-        .when('/users', {
-            templateUrl: 'templates/pages/users/index.html',
-            controller: 'UsersIndexController',
-            conrollerAs: 'indexCtrl'
-        })
-
-        .when('/users/:id', {
-            templateUrl: 'templates/pages/users/show.html',
-            controller: 'UsersShowController',
-            conrollerAs: 'showCtrl'
-        })
 
         .when('/notes', {
             templateUrl: 'templates/pages/notes/index.html',
@@ -41,6 +33,18 @@ angular.module("NoteWrangler", ["ngRoute"]).config(["$routeProvider", function (
             templateUrl: 'templates/pages/notes/edit.html',
             controller: 'NotesEditController',
             conrollerAs: 'editCtrl'
+        })
+    
+        .when('/users', {
+            templateUrl: 'templates/pages/users/index.html',
+            controller: 'UsersIndexController',
+            conrollerAs: 'indexCtrl'
+        })
+
+        .when('/users/:id', {
+            templateUrl: 'templates/pages/users/show.html',
+            controller: 'UsersShowController',
+            conrollerAs: 'showCtrl'
         })
 
         .when('/profile/edit', {

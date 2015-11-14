@@ -1,0 +1,84 @@
+body {
+    background: #00F;
+    font-family: monospace;
+    font-weight: 16px;
+    padding: 2rem 0 0 0;
+    color: #FFF;
+    margin: 0;
+}
+
+#actionbar {
+    background: #FFF;
+    color: #00F;
+    font-size: 1rem;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    line-height: 2.5rem;
+    padding: 0 .25rem;
+    box-sizing: content-box;
+    box-shadow: 0 0 2rem -1rem #000;
+    text-transform: uppercase;
+}
+
+#actionbar a {
+    display: inline-block;
+    padding: 0 .25rem;
+}
+
+#actionbar a:hover {
+    color: #F05;
+}
+
+a:link, a:visited, a:hover, a:active, a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+
+
+
+.main-wrapper {
+    margin: 0 .5rem;
+}
+
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin: 1rem 0 .5rem 0;
+}
+
+
+
+
+
+.note-wrapper {
+    max-width: 800px;
+}
+
+.card-notes {
+    background: #FFF;
+    color: #00F !important;
+    display: block;
+    padding: .5rem;
+    border-radius: 2px;
+}
+
+.card-notes + .card-notes {
+    margin: .5rem 0 0 0;
+}
+
+.h3 {
+    margin: 0 0 .5rem 0;
+    border-bottom: 1px dotted #00F;
+    padding: 0 .5rem .5rem .5rem;
+    position: relative;
+    left: -.5rem;
+    width: 100%;
+}

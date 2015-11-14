@@ -1,4 +1,8 @@
-angular.module("NoteWrangler").controller("ProfileEditController", function() {
+/*global console, angular */
+
+angular.module("NoteWrangler").controller("ProfileEditController", function () {
+
+    "use strict";
     
     
 });

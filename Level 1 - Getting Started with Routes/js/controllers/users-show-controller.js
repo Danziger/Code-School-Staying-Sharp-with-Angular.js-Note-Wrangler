@@ -1,4 +1,8 @@
-angular.module("NoteWrangler").controller("UsersShowController", function() {
+/*global console, angular */
+
+angular.module("NoteWrangler").controller("UsersShowController", function () {
+
+    "use strict";
     
     
 });

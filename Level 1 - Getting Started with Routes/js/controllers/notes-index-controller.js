@@ -1,8 +1,16 @@
-angular.module("NoteWrangler").controller("NotesIndexController", function($http) {
+/*global console, angular */
+
+angular.module("NoteWrangler").controller("NotesIndexController", function (/*Note,*/ $http, $scope) {
+
+    "use strict";
     
-    var controller = this;
+    // $scope.notes = Note.query();
     
-    $http({method: 'GET', url: 'notes.json'}).success(function(data) {
-        controller.notes = data;
+    $http({method: 'GET', url: 'notes.json'}).success(function (data) {
+        console.log("GET - notes.json: ");
+        console.table(data);
+        $scope.notes = data;
     });
 });
+
+console.log("notes-index-controller.js loaded!");
