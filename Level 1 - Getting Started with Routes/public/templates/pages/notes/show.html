@@ -1,0 +1,16 @@
+<div class="card">
+    <h1>
+        <i class="{{notesShowCtrl.note.icon}} icon left"></i>
+        <a ng-href="#/notes">NOTES ‹ </a>Note {{notesShowCtrl.note.id}}: {{notesShowCtrl.note.header}}
+    </h1>
+    
+    <p>Created by: {{notesShowCtrl.note.user.name || notesShowCtrl.note.user.username}}</p>
+    <a ng-href="#/notes/{{notesShowCtrl.note.id}}/edit" ng-if="currentUser.id === notesShowCtrl.note.UserId" class="btn btn-danger">Edit Note</a>
+    <a ng-href="#/notes/{{notesShowCtrl.note.id}}/delete" ng-if="currentUser.id === notesShowCtrl.note.UserId" class="btn btn-danger">Delete</a>
+    
+    <h3>Description:</h3>
+    <p>{{notesShowCtrl.note.description}}</p>
+
+    <h3>Contents:</h3>
+    <p>{{notesShowCtrl.note.content}}</p>
+</div>
