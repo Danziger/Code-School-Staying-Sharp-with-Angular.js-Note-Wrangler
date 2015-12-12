@@ -1,14 +1,12 @@
-angular.module('NoteWrangler').controller('NotesIndexController', function($scope, Note, Session) {
-  // Without NgResource
-  // Note.all().success(function(data) {
-  //   $scope.notes = data;
-  // });
-  
-  // With NgResource
-  $scope.notes = Note.query();
+/*global console, angular */
 
-  Session.sessionData().success(function(sessionUser) {
-    // Create a new User from the session user data
-    $scope.loggedIn = !!sessionUser;
-  });
+angular.module("NoteWrangler").controller("NotesIndexController", function (/*Note,*/ $http, $scope) {
+
+    "use strict";
+
+    $scope.notes = [{
+        title: "Test Note",
+        description: "Bla bla bla..."
+    }];
+
 });
