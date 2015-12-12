@@ -1,0 +1,16 @@
+<div class="card" title="{{card.header}}">
+
+    <img ng-src='{{card.image}}' ng-if='image'>
+
+    <div ng-if='icon'>
+        <i class="icon icon-card {{card.icon}}"></i>
+    </div>
+
+    <h2 class="h3"><a ng-href="#/notes/{{card.id}}">{{card.header}}</a></h2>
+
+    <p class="card-type">
+        {{card.type}}
+    </p>
+    
+    <div class="card-body summary" ng-bind-html="card.description"></div>
+</div>

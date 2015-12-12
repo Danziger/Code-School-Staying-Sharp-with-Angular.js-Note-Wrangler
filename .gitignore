@@ -59,3 +59,6 @@ log
 
 # SASS
 .sass-cache
+
+# WebStorm
+.idea
