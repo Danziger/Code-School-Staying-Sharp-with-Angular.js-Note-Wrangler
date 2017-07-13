@@ -1,0 +1,36 @@
+<div class="note-wrapper">
+    
+    <div class="note-content">
+
+        <div class="note-wrapper">
+            <!--<a class="card-notes" ng-repeat="note in notesIndexCtrl.notes" ng-href="#/notes/{{note.id}}">
+
+                
+                <div ng-if="icon">
+                    <i class="icon icon-card {{note.icon}}"></i>
+                </div>
+                
+                <div class="card" title="{{note.title}}">
+                    <h2 class="h3">{{note.title}}</h2>
+                    <p>{{note.description}}</p>
+                </div>
+                -->
+                
+                <nw-card ng-repeat="note in notesIndexCtrl.notes"
+                    header="{{note.title}}"
+                    icon="{{note.icon}}"
+                    description="note.description"
+                    id="{{note.id}}"
+                    type="{{note.noteType.name}}">
+                </nw-card>
+
+            <!--</a>-->
+        </div>
+    
+    </div>
+    
+    <!--
+    <nw-category-select active-category='current' notes='notes'></nw-category-select>
+    -->
+    
+</div>

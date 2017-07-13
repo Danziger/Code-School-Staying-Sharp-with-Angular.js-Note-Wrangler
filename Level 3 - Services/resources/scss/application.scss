@@ -1,0 +1,177 @@
+// *************************************
+//
+//   [Project Name] - MVCSS v4.0.2
+//   -> Manifest
+//
+// *************************************
+
+// -------------------------------------
+//   Foundation
+// -------------------------------------
+
+@import "foundation/reset";
+@import "foundation/helpers";
+@import "foundation/config";
+@import "foundation/base";
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+
+@import "components/bucket";
+@import "components/card";
+@import "components/cell";
+@import "components/form";
+@import "components/grid";
+@import "components/list";
+@import "components/panel";
+@import "components/row";
+@import "components/well";
+
+// -------------------------------------
+//   Structures
+// -------------------------------------
+
+@import "structures/button";
+@import "structures/dropdown";
+@import "structures/hero";
+@import "structures/icons";
+@import "structures/registration";
+@import "structures/sort";
+
+// -------------------------------------
+//   Vendor
+// -------------------------------------
+
+@import "vendor/tooltip";
+
+// -------------------------------------
+//   Inbox
+// -------------------------------------
+
+#actionbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: $c-background;
+  line-height: $h-std;
+  height: $h-std;
+  padding: $b-space-xs 0;
+  
+
+  box-shadow: 0 0 1.75rem -1rem $black;
+  
+  box-sizing: border-box;
+}
+
+#actionbar-content {
+  box-sizing: border-box;
+  padding: 0 $w-column 0 0;
+}
+
+#actionbar-search {
+  position: relative;
+  line-height: $h-std - 2 * $b-space-xs;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: $b-space-xs;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  float: left;
+  border-radius: $b-borderRadius;
+  font-size: 1rem;
+  box-shadow: 0 0 1rem -.5rem $black;
+  transition:
+    opacity ease-out .125s,
+    box-shadow ease-out .125s;
+  
+  opacity: .75;
+  
+  &:hover {
+    opacity: 1;
+  }
+  
+  &:focus {
+    opacity: 1;
+    box-shadow: 0 0 1rem -.375rem $black;
+  }
+}
+
+.nav-content {
+  @extend %cell;
+  height: 100%;
+}
+
+.main-wrapper {
+  @extend %cell;
+  padding: $h-std + $b-space-s 0 0 0;
+}
+
+.nav-list {
+  @extend %list;
+  .list-item {
+    border-bottom: none;
+    color: $c-highlight;
+    display: inline;
+    margin-right: $list-space;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      background: none;
+      border-bottom: none;
+      color: lighten($c-highlight, 10%);
+    }
+    &.active {
+      background: none;
+      border-bottom: none;
+      color: lighten($c-highlight, 10%);
+    }
+  }
+}
+
+.new-note {
+  @extend %row;
+}
+
+.new-note-container {
+  @extend %card;
+  @extend %cell;
+  text-align: left;
+}
+
+.session {
+  float: right;
+  display: inline-block;
+}
+
+.session-create {
+  float: right;
+}
+
+.note-wrapper, .users-wrapper , .wrapper {
+  @extend %grid;
+}
+
+.note-content {
+  @extend %grid-box;
+  @extend %grid-box-3of4;
+}
+
+.notes-header {
+  margin-bottom: $b-space-m;
+  h1 {
+    @extend %h4;
+    display: inline-block;
+  }
+}
+
+.user-name {
+  color: $c-highlight;
+}
